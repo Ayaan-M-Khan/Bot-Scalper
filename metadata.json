@@ -1,0 +1,6 @@
+{
+  "name": "Scalper",
+  "description": "Open-source high-throughput retail task engine, concurrency laboratory, and bot defense research dashboard by Ayaan Khan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
