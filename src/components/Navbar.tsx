@@ -132,9 +132,17 @@ export default function Navbar({ onOpenQuickstart, onOpenCommandPalette, onOpenD
                 70+ Sites
               </button>
               <button 
+                id="nav-monitors-btn"
+                onClick={() => scrollToSection('monitors-view')}
+                className="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/50 transition-colors cursor-pointer text-cyan-300 font-semibold flex items-center gap-1.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Monitors</span>
+              </button>
+              <button 
                 id="nav-architecture-lab-btn"
                 onClick={() => scrollToSection('architecture-lab')}
-                className="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/50 transition-colors cursor-pointer text-cyan-300 font-semibold"
+                className="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/50 transition-colors cursor-pointer"
               >
                 Concurrency Lab
               </button>
@@ -254,8 +262,15 @@ export default function Navbar({ onOpenQuickstart, onOpenCommandPalette, onOpenD
                   70+ Sites
                 </button>
                 <button
+                  onClick={() => scrollToSection('monitors-view')}
+                  className="px-3 py-2 text-left text-sm font-medium text-cyan-300 hover:bg-slate-800/70 rounded-lg flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Live Monitors &amp; Telemetry</span>
+                </button>
+                <button
                   onClick={() => scrollToSection('architecture-lab')}
-                  className="px-3 py-2 text-left text-sm font-medium text-cyan-300 hover:bg-slate-800/70 rounded-lg"
+                  className="px-3 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-800/70 rounded-lg"
                 >
                   Concurrency Lab
                 </button>

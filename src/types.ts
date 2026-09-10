@@ -53,3 +53,41 @@ export interface FAQItem {
   answer: string;
   category: 'General' | 'Open Source' | 'Architecture' | 'Proxies & Stealth';
 }
+
+export interface StoreMonitor {
+  id: string;
+  name: string;
+  url: string;
+  endpoint: string;
+  active: boolean;
+  latencyMs: number;
+  status: 'HEALTHY' | 'DEGRADED' | 'PAUSED' | 'ERROR';
+  httpCode: number;
+  tlsHandshakeMs: number;
+  lastPing: string;
+  proxyType: string;
+  category: string;
+}
+
+export interface TrackedProductItem {
+  id: string;
+  store: string;
+  name: string;
+  sku: string;
+  price: number;
+  targetMsrp: number;
+  status: 'IN_STOCK' | 'OUT_OF_STOCK' | 'RESTOCK_DETECTED';
+  imageUrl: string;
+  lastChecked: string;
+  stockCount?: number;
+  category: string;
+}
+
+export interface TelemetryLog {
+  id: string;
+  timestamp: string;
+  level: 'INFO' | 'RESTOCK' | 'LATENCY' | 'ALERT' | 'ERROR';
+  store: string;
+  message: string;
+  latencyMs?: number;
+}

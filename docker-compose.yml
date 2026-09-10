@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Fast, asynchronous Python backend daemon with Playwright
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: scalper-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PORT=8000
+    restart: unless-stopped
+
+  # High-performance React / Vite GUI Dashboard
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: scalper-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    restart: unless-stopped

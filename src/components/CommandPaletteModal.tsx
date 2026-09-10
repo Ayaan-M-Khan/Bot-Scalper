@@ -31,6 +31,7 @@ export default function CommandPaletteModal({ isOpen, onClose, onSelectAction }:
 
   const actions = [
     { id: 'task-engine', title: 'Open Task Engine Interactive Simulator', category: 'Engine', icon: Cpu, shortcut: '⌘ E' },
+    { id: 'monitors-view', title: 'Open Live Retailer Health Monitors & Product Watcher', category: 'Monitoring', icon: Radio, shortcut: 'G M' },
     { id: 'view-sites', title: 'Browse 70+ Supported Retail Modules', category: 'Navigation', icon: Globe2, shortcut: 'G S' },
     { id: 'architecture-lab', title: 'Launch Concurrency & Bot Defense Lab', category: 'Research', icon: BarChart3, shortcut: 'G L' },
     { id: 'open-source', title: 'View Free Setup & JSON Configuration Templates', category: 'Setup', icon: Terminal, shortcut: 'G O' },

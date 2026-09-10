@@ -1,0 +1,31 @@
+# ==============================================================================
+# Scalper Engine - Production Python Requirements
+# Verified & Tested for Python 3.10, 3.11, and 3.12
+# ==============================================================================
+
+# Core API & ASGI Web Server
+fastapi>=0.110.0,<0.115.0
+uvicorn[standard]>=0.28.0,<0.32.0
+
+# Settings, Validation & Schemas
+pydantic>=2.6.4,<2.10.0
+pydantic-settings>=2.2.1,<2.5.0
+
+# Asynchronous Networking & Browser Automation
+playwright>=1.42.0,<1.48.0
+aiohttp>=3.9.3,<3.11.0
+requests>=2.31.0,<2.33.0
+
+# Environment & Configuration
+python-dotenv>=1.0.1,<1.1.0
+
+# Async Database & Persistence Layer
+sqlalchemy>=2.0.28,<2.1.0
+aiosqlite>=0.20.0,<0.21.0
+
+# Optional Desktop Application Window Wrapper
+pywebview>=5.0.0,<5.4.0
+
+# Terminal Formatting & CLI Utilities
+colorama>=0.4.6,<0.5.0
+rich>=13.7.1,<13.9.0

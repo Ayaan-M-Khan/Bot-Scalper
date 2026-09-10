@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import SupportedSites from './components/SupportedSites';
+import MonitorsView from './components/MonitorsView';
 import ArchitectureLab from './components/ArchitectureLab';
 import OpenSourceSection from './components/OpenSourceSection';
 import FAQ from './components/FAQ';
@@ -38,6 +39,11 @@ export default function App() {
       }
       case 'view-sites': {
         const el = document.getElementById('supported-sites');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        break;
+      }
+      case 'monitors-view': {
+        const el = document.getElementById('monitors-view');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
         break;
       }
@@ -116,6 +122,9 @@ export default function App() {
 
         {/* Supported Retailers Directory & Real-Time Filter */}
         <SupportedSites />
+
+        {/* Live Retailer Health, Product Watcher & Telemetry Stream */}
+        <MonitorsView />
 
         {/* Concurrency, Distributed Locking & Rate Limit Research Lab */}
         <ArchitectureLab />
